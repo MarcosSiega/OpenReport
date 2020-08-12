@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using OpenReport.Layouts.Elements;
+using OpenReport.Layouts.Elements.Base;
 
 namespace OpenReport
 {

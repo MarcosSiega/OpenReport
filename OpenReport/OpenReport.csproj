@@ -49,10 +49,10 @@
     <Compile Include="Attributes\Table\TableColumnTotalizeAttribute.cs" />
     <Compile Include="Attributes\Table\TableStyleAttribute.cs" />
     <Compile Include="Attributes\Text\TextAlignAttribute.cs" />
-    <Compile Include="Layouts\Elements\DocumentElement.cs" />
-    <Compile Include="Layouts\Elements\HeaderElement.cs" />
+    <Compile Include="Layouts\Elements\Base\DocumentElement.cs" />
+    <Compile Include="Layouts\Elements\Base\HeaderElement.cs" />
     <Compile Include="Layouts\Elements\IElement.cs" />
-    <Compile Include="Layouts\Elements\TableElement.cs" />
+    <Compile Include="Layouts\Elements\Components\TableElement.cs" />
     <Compile Include="ORDocumentViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,9 +65,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Styles\ColumnFormat.cs" />
+    <Compile Include="Styles\ColumnFormatStyle.cs" />
     <Compile Include="Styles\TableStyle.cs" />
-    <Compile Include="Styles\TextAlign.cs" />
+    <Compile Include="Styles\TextAlignStyle.cs" />
     <Compile Include="Tools\PrinterTool.cs" />
     <Compile Include="Tools\PrinterToolOptions.cs" />
   </ItemGroup>

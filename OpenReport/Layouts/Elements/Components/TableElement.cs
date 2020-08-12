@@ -8,7 +8,7 @@ using OpenReport.Attributes;
 using OpenReport.Attributes.Table;
 using OpenReport.Styles;
 
-namespace OpenReport.Layouts.Elements
+namespace OpenReport.Layouts.Elements.Components
 {
     public class TableElement<T> : IElement
     {

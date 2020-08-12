@@ -1,4 +1,4 @@
-﻿namespace OpenReport.Layouts.Elements
+﻿namespace OpenReport.Layouts.Elements.Base
 {
     public class DocumentElement : IElement
     {

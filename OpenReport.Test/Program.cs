@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 using OpenReport.Attributes.Table;
-using OpenReport.Layouts.Elements;
+using OpenReport.Layouts.Elements.Base;
+using OpenReport.Layouts.Elements.Components;
 using OpenReport.Styles;
 
 namespace OpenReport.Test
@@ -13,9 +14,11 @@ namespace OpenReport.Test
         [STAThread]
         static void Main()
         {
-            var header = new HeaderElement();
-            header.Header = "RELATÓRIO DE PRODUTOS";
-            header.HeaderTop = "EMPRESA DE EMPREENDIMENTOS LTDA.";
+            var header = new HeaderElement
+            {
+                Header = "RELATÓRIO DE PRODUTOS",
+                HeaderTop = "EMPRESA DE EMPREENDIMENTOS LTDA."
+            };
 
             var table = new TableElement<Produto>(new List<Produto>()
             {
@@ -346,9 +349,11 @@ namespace OpenReport.Test
                 new Produto() { CH_Nome = "Iogurte 500ML", VR_Unitario = 4.1m, VR_Venda = 4.1m * 1.3m }
             });
 
-            var document = new DocumentElement();
-            document.HeaderText = header.Header;
-            document.Content = header.Render() + table.Render();
+            var document = new DocumentElement
+            {
+                HeaderText = header.Header,
+                Content = header.Render() + table.Render()
+            };
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -367,7 +372,7 @@ namespace OpenReport.Test
         public decimal VR_Unitario { get; set; }
 
         [TableColumnHeader("Vlr. Venda")]
-        [TableColumnTotalize(ColumnFormat.Decimal)]
+        [TableColumnTotalize(ColumnFormatStyle.Decimal)]
         public decimal VR_Venda { get; set; }
     }
 }
